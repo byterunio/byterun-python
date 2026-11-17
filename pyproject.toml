@@ -1,0 +1,55 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "byterun"
+dynamic = ["version"]  # single source of truth: src/byterun/__init__.py
+description = "Official Python SDK for ByteRun, an AI infrastructure platform for Python, SQL and AI agent execution."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "Apache-2.0"
+license-files = ["LICENSE"]
+authors = [{ name = "ByteRun" }]  # PLACEHOLDER: no contact email on purpose
+keywords = ["byterun", "sdk", "ai", "agents", "infrastructure", "execution", "python"]
+classifiers = [
+    "Development Status :: 1 - Planning",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://byterun.io/"
+Platform = "https://byterun.io/platform"
+Roadmap = "https://byterun.io/roadmap"
+Repository = "https://github.com/byterunio/byterun-python"
+Issues = "https://github.com/byterunio/byterun-python/issues"
+
+# Development-only tools (PEP 735). Install with: pip install --group dev
+[dependency-groups]
+dev = [
+    "pytest>=8",
+    "build>=1.2",
+    "twine>=6",
+    "hatchling>=1.27",  # lets the wheel test build with --no-isolation (no network)
+]
+
+[tool.hatch.version]
+path = "src/byterun/__init__.py"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/byterun"]
+
+[tool.hatch.build.targets.sdist]
+include = ["/src", "/tests", "/README.md", "/LICENSE", "/pyproject.toml"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
