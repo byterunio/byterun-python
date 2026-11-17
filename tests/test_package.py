@@ -7,7 +7,7 @@ from pathlib import Path
 import byterun
 
 ROOT = Path(__file__).resolve().parent.parent
-EXPECTED_VERSION = "0.0.1"
+EXPECTED_VERSION = "0.0.2"
 
 
 def test_import_and_version():
