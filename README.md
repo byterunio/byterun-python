@@ -3,9 +3,10 @@
 The official Python SDK for [ByteRun](https://byterun.io/), an AI infrastructure platform that
 provides execution environments for Python, SQL and AI agents.
 
-> **Early preview.** Version `0.0.1` reserves the `byterun` package name and sets up the
-> project. The SDK itself is **not ready yet**: it can't run anything today. Watch this
-> repository or the [roadmap](https://byterun.io/roadmap) for the first functional release.
+> **Early preview.** Version `0.0.x` reserves the `byterun` package name and sets up the
+> project. The SDK itself is **not ready yet**: it can't run anything today. In the meantime,
+> try ByteRun in the [playground on byterun.io](https://byterun.io/), and follow the
+> [roadmap](https://byterun.io/roadmap) for the first functional release.
 
 ## What is ByteRun?
 
